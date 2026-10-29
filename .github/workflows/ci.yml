@@ -1,9 +1,12 @@
 name: Build and Test
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - ci/cloud-verify-collections-1142-r6
+
+permissions:
+  contents: read
 
 jobs:
   build:
