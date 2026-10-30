@@ -1,0 +1,269 @@
+{
+  "verifiedAt": "2026-10-30T04:35:34Z",
+  "environment": {
+    "client": "Windows",
+    "authentication": "PAT",
+    "restApiVersion": "3.30",
+    "fixtures": "Dedicated synthetic Workbook/View/published Datasource and newly owned private Collections; no production row data used"
+  },
+  "sourcePins": {
+    "collections": {
+      "sourceCommit": "ed846998c94fc4db2106b2366f133d9cad004033",
+      "workflowRun": 40918088902,
+      "artifactSha256": "7b64fc3734ba2be40947ebd5e7084c1b3f15050e42ed8bb3bd5144bd131737cc"
+    },
+    "tags": {
+      "sourceCommit": "ed0f684d9b834678b6645328d924ca1704e724a5",
+      "workflowRun": 40824651587,
+      "artifactSha256": "5c092439e3cfa4c4e9f3afdb51fa15d891a33070c027851b771514b559f62c8a"
+    },
+    "favorites": {
+      "sourceCommit": "e128d85f56043da35b40103e2ba47843f02f6944",
+      "workflowRun": 40844529334,
+      "artifactSha256": "01d0db41e4540ddc67244ebe2ac4b6c1c5654b9e46349f8e079378f3a78e9d97"
+    },
+    "recent-content": {
+      "sourceCommit": "bf21e15cbeec5db40c6913482145e79fdc5c44d1",
+      "workflowRun": 40824355364,
+      "artifactSha256": "e117fbc7377e84cebe0a018064237be374c3c5e52b8c3f28da0fde283af0db2a"
+    }
+  },
+  "checks": {
+    "datasourceUnicodeDuplicateAddExactAnyAndRemoveRestore": true,
+    "viewUnicodeAddAndRemoveImagesVerified": true,
+    "collectionThreeKindsAddAndRemoveRestore": true,
+    "collectionEightPageOrderedUnionNoGapOrDuplicate": true,
+    "collectionAscendingDescendingAndUiOrderAgree": true,
+    "collectionPrivateAndExactIdFilters": true,
+    "collectionConfiguredBoundedReadRefused": true,
+    "favoritesFourKindsAddedListedRemovedAndRestoredAcrossPinnedSessions": true,
+    "favoritesLimitOneAndPageTwoEmptyBoundary": true,
+    "recentExactResponse21ResourceOrderAgrees": true,
+    "recentReopenedActualViewPromotedToFirst": true
+  },
+  "latestSession": {
+    "resultRecords": 57,
+    "normalToolResponses": 52,
+    "localUiConfirmations": 4,
+    "expectedConfiguredReadRefusal": 1,
+    "explicitStopSequence": 58,
+    "finished": true,
+    "credentialsDisposed": true
+  },
+  "collections": {
+    "listCount": 8,
+    "pageSize": 1,
+    "orderedPageUnionMatchesAll": true,
+    "descendingReversesAscending": true,
+    "privateFilterCount": 8,
+    "exactCollectionFilterCount": 1,
+    "membershipKinds": [
+      "workbook",
+      "view",
+      "datasource"
+    ],
+    "memberCountAfterAdd": 3,
+    "memberCountAfterRemove": 0,
+    "localRestrictionRefusalIsNotHttp403": true
+  },
+  "tags": {
+    "workbook": "Same-source retained exact/ANY each1, removal0",
+    "view": "Japanese duplicate input->one visible tag, exact/ANY/AND each1, removal0",
+    "datasource": "Post-UTF8 Japanese duplicate input->one visible tag, exact/ANY/AND each1, removal0"
+  },
+  "favorites": {
+    "kinds": [
+      "workbook",
+      "view",
+      "datasource",
+      "project"
+    ],
+    "supportedCountsEach": [
+      1,
+      2,
+      1
+    ],
+    "targetPresenceEach": [
+      false,
+      true,
+      false
+    ],
+    "limit1": 1,
+    "page2": 0,
+    "existingProjectAndFlowPreserved": true
+  },
+  "recent": {
+    "defaultCount": 21,
+    "sameGetWireCount": 21,
+    "wireMcpOrderMatches": true,
+    "beforeFirst": "fixed-parent-workbook",
+    "afterFirst": "fixed-view",
+    "uiAccessAtOriginalFreshnessCheck": "28 seconds",
+    "publicationRecapture": "Read-only, fixture-filtered image89 shows later elapsed access of one hour; no new MCP call"
+  },
+  "limits": [
+    "PAT environment only; actual HTTP403 and JWT/UAT scope/role denial were not exercised.",
+    "Collection bounded-context error is a configured local refusal, not a real HTTP403.",
+    "Collection membership was exercised for Workbook/View/Datasource, not every server-admitted arbitrary contentType.",
+    "Favorites >1000-row page progression is covered by CI tests, not this small live fixture.",
+    "Flow favorites and Flow recents are not exposed by these tools; full Cloud UI count parity is not claimed."
+  ],
+  "offlineChecks": {
+    "count": 8,
+    "allPassed": true,
+    "sourceScope": "Windows verification adapter, not a substitute for live Cloud results"
+  },
+  "publicImages": [
+    {
+      "number": 80,
+      "path": "evidence/tableau-cloud/2026-10-30/final/80-collection-created-private-empty-verified-owner-redacted.png",
+      "sha256": "68387ee98dfd4986bb5695b430067498ca81167b659d6e6dfc67fa196b2ef31b",
+      "dimensions": [
+        1695,
+        928
+      ]
+    },
+    {
+      "number": 81,
+      "path": "evidence/tableau-cloud/2026-10-30/final/81-collection-three-resource-additions-verified-owner-redacted.png",
+      "sha256": "f940d6418fcda4fbbe2c8b09fe050aa99d78ba8c8c50b07817edcf5fc6bdb35d",
+      "dimensions": [
+        1695,
+        928
+      ]
+    },
+    {
+      "number": 82,
+      "path": "evidence/tableau-cloud/2026-10-30/final/82-collection-item-ascending-order-verified-owner-redacted.png",
+      "sha256": "0ae30c4d231624fec5e9a010ed3c5fa9838ae32875280c81da323ec1b63bc39a",
+      "dimensions": [
+        1695,
+        928
+      ]
+    },
+    {
+      "number": 83,
+      "path": "evidence/tableau-cloud/2026-10-30/final/83-collection-three-resources-restored-empty-verified-owner-redacted.png",
+      "sha256": "092202b4a958194360b3e58b76fc4c90feab6622ec87968cf47e3567d233bcbb",
+      "dimensions": [
+        1695,
+        928
+      ]
+    },
+    {
+      "number": 84,
+      "path": "evidence/tableau-cloud/2026-10-30/final/84-collections-list-eight-private-ascending-verified-owner-redacted.png",
+      "sha256": "9880f84c574fe652e762d395d9ddd5fec572a5729885f16d027e6fa6897af831",
+      "dimensions": [
+        1695,
+        928
+      ]
+    },
+    {
+      "number": 85,
+      "path": "evidence/tableau-cloud/2026-10-30/final/85-collections-list-descending-verified-owner-redacted.png",
+      "sha256": "c8dc28cacff7a101058120dba598eb7267a3fd9267bd8939ee317728b555e3c9",
+      "dimensions": [
+        1695,
+        928
+      ]
+    },
+    {
+      "number": 73,
+      "path": "evidence/tableau-cloud/2026-10-30/final/73-datasource-japanese-tag-added-verified-owner-redacted.png",
+      "sha256": "af7046a7bb2e35520277551df472ac91d4e85c49ce5d07e22871d827b3aff173",
+      "dimensions": [
+        1759,
+        894
+      ]
+    },
+    {
+      "number": 74,
+      "path": "evidence/tableau-cloud/2026-10-30/final/74-datasource-japanese-tag-restored-verified-owner-redacted.png",
+      "sha256": "64b6dd79ac406c1f0754fcc0dc5d7e1aebb9bb9b5ba435da0e4886fb887aaacb",
+      "dimensions": [
+        1759,
+        894
+      ]
+    },
+    {
+      "number": 75,
+      "path": "evidence/tableau-cloud/2026-10-30/final/75-view-japanese-tag-added-verified-owner-redacted.png",
+      "sha256": "b84bec73a18e5a95316f3a0f8345d5ec4deea28dad2dcba4fed5c99d01f6b4e5",
+      "dimensions": [
+        1695,
+        928
+      ]
+    },
+    {
+      "number": 76,
+      "path": "evidence/tableau-cloud/2026-10-30/final/76-view-japanese-tag-restored-verified-owner-redacted.png",
+      "sha256": "8248dabf7f4d29d9ae691ffa1751934bb3c04b28fc1ebf56cd89a9c185b3855e",
+      "dimensions": [
+        1695,
+        928
+      ]
+    },
+    {
+      "number": 52,
+      "path": "evidence/tableau-cloud/2026-10-30/final/52-view-favorite-added-owner-redacted.png",
+      "sha256": "5563d439e11043f2d6ddfbabe76a5d88a06fb54a74dd05ba876beb3451d82d63",
+      "dimensions": [
+        1695,
+        928
+      ]
+    },
+    {
+      "number": 70,
+      "path": "evidence/tableau-cloud/2026-10-30/final/70-view-favorite-restored-visually-verified-owner-redacted.png",
+      "sha256": "9551f3e1b8b7729a584c099e5556f2859835aae48ab49e093ff96b4074fec079",
+      "dimensions": [
+        1695,
+        928
+      ]
+    },
+    {
+      "number": 54,
+      "path": "evidence/tableau-cloud/2026-10-30/final/54-datasource-favorite-added-header-owner-redacted.png",
+      "sha256": "b95052b534bc9896b5896dcfc2061ded760ab31d4c634f06efaa04c48daa9549",
+      "dimensions": [
+        1758,
+        895
+      ]
+    },
+    {
+      "number": 55,
+      "path": "evidence/tableau-cloud/2026-10-30/final/55-datasource-favorite-restored-owner-redacted.png",
+      "sha256": "a5d15cb6a99773468b11d4507bcd47603148b8de230b1e5716c252b7509e5a16",
+      "dimensions": [
+        1759,
+        894
+      ]
+    },
+    {
+      "number": 87,
+      "path": "evidence/tableau-cloud/2026-10-30/final/87-synthetic-view-reopened-rendered-verified-owner-redacted.png",
+      "sha256": "2deb4190848b6be7103a01c9d59fd38fd9697a9b3f83144b6e6cd05ab1fa20d7",
+      "dimensions": [
+        1758,
+        894
+      ]
+    },
+    {
+      "number": 89,
+      "path": "evidence/tableau-cloud/2026-10-30/final/89-recent-filtered-fixture-publication-owner-redacted.png",
+      "sha256": "1ec66340bf74c515aaa959c02aa0d9aef0130a869b6f0e149b578b3c7ed51b90",
+      "dimensions": [
+        1695,
+        928
+      ]
+    }
+  ],
+  "retainedEarlierImages": [
+    20,
+    21,
+    39,
+    40
+  ],
+  "imageDisclosure": "The 16 final screenshots are owner-redacted edited copies: owner names and personal collection titles are covered with opaque black rectangles, and account avatars are obscured. The image editor rescaled these copies; relevant text, rows, counts, order, tag states, favorite stars and chart values were visually checked against unchanged local originals. Four retained earlier images are unchanged."
+}
