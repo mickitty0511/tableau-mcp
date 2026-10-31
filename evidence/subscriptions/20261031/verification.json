@@ -1,0 +1,144 @@
+{
+  "sourceCommit": "957ead93e74eb94a52e5dcd7a531a6ffd0edc278",
+  "runtimeHash": "d8f8bfd71ca0536253b7964b006cf4100c753f8e5578fb0dbd67329f2e078942",
+  "label": "mcp-subs-20261031-f2f7543b",
+  "observedAt": "2026-10-31T03:13:04.733Z",
+  "records": [
+    {
+      "sequence": 1,
+      "operation": "inspect",
+      "status": "PASS",
+      "registration": "PASS",
+      "targetsVerified": true,
+      "baselineCount": 0,
+      "baselineHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "sequence": 2,
+      "operation": "Workbook-create",
+      "status": "PASS",
+      "tool": "create-subscription",
+      "contentType": "Workbook",
+      "toolSucceeded": true,
+      "createdId": "d7584f74-3c7b-46e7-986e-50d663704e56",
+      "suspended": true,
+      "ownerContentAndScheduleVerified": true
+    },
+    {
+      "sequence": 3,
+      "operation": "Workbook-list",
+      "status": "PASS",
+      "tool": "list-subscriptions",
+      "contentType": "Workbook",
+      "toolSucceeded": true,
+      "createdSubscriptionPresent": true,
+      "suspended": true
+    },
+    {
+      "sequence": 4,
+      "operation": "View-create",
+      "status": "PASS",
+      "tool": "create-subscription",
+      "contentType": "View",
+      "toolSucceeded": true,
+      "createdId": "fe71ae41-ba52-46c7-a11e-a574e59bc9f7",
+      "suspended": true,
+      "ownerContentAndScheduleVerified": true
+    },
+    {
+      "sequence": 5,
+      "operation": "Workbook-resume",
+      "status": "PASS",
+      "tool": "resume-subscription",
+      "contentType": "Workbook",
+      "toolSucceeded": true,
+      "suspended": false,
+      "restReadback": true,
+      "ownerContentAndScheduleUnchanged": true
+    },
+    {
+      "sequence": 6,
+      "operation": "Workbook-suspend",
+      "status": "PASS",
+      "tool": "suspend-subscription",
+      "contentType": "Workbook",
+      "toolSucceeded": true,
+      "suspended": true,
+      "restReadback": true,
+      "ownerContentAndScheduleUnchanged": true
+    },
+    {
+      "sequence": 7,
+      "operation": "View-list",
+      "status": "PASS",
+      "tool": "list-subscriptions",
+      "contentType": "View",
+      "toolSucceeded": true,
+      "createdSubscriptionPresent": true,
+      "suspended": true
+    },
+    {
+      "sequence": 8,
+      "operation": "View-resume",
+      "status": "PASS",
+      "tool": "resume-subscription",
+      "contentType": "View",
+      "toolSucceeded": true,
+      "suspended": false,
+      "restReadback": true,
+      "ownerContentAndScheduleUnchanged": true
+    },
+    {
+      "sequence": 9,
+      "operation": "View-suspend",
+      "status": "PASS",
+      "tool": "suspend-subscription",
+      "contentType": "View",
+      "toolSucceeded": true,
+      "suspended": true,
+      "restReadback": true,
+      "ownerContentAndScheduleUnchanged": true
+    },
+    {
+      "sequence": 10,
+      "operation": "Workbook-cleanup",
+      "status": "PASS",
+      "contentType": "Workbook",
+      "cleanup": "PASS",
+      "deletedOnlyCreatedSubscription": true,
+      "readbackStatus": 404
+    },
+    {
+      "sequence": 11,
+      "operation": "View-cleanup",
+      "status": "PASS",
+      "contentType": "View",
+      "cleanup": "PASS",
+      "deletedOnlyCreatedSubscription": true,
+      "readbackStatus": 404
+    }
+  ],
+  "baselineRestored": true,
+  "credentialsPersisted": false,
+  "passed": true,
+  "testId": "LIVE-PR-SUBSCRIPTIONS",
+  "issue": "https://github.com/tableau/tableau-mcp/issues/1165",
+  "pullRequest": "https://github.com/tableau/tableau-mcp/pull/1176",
+  "apiVersionUsedForIndependentReadback": "3.30",
+  "operationProvenance": "Eight feature tool calls through the actual MCP stdio runtime; registration and fixed targets checked through MCP; cleanup and state readback through authenticated REST.",
+  "emailDeliveryTriggered": false,
+  "note": "Subscriptions used a future Sunday23:55 schedule, were created paused and were removed after state transitions; no scheduled email delivery was tested.",
+  "cloudUiObserved": {
+    "createdSubscriptions": 2,
+    "types": [
+      "Workbook",
+      "View"
+    ],
+    "state": "paused",
+    "timezone": "Asia/Tokyo",
+    "screenshot": "evidence/subscriptions/20261031/cloud-created-subscriptions.png",
+    "afterCleanupCount": 0,
+    "cleanupScreenshot": "evidence/subscriptions/20261031/cloud-cleanup-confirmed.png",
+    "screenshotsContainOwnerOrEmail": false
+  }
+}
