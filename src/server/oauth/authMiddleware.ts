@@ -1,7 +1,8 @@
-import { isInitializeRequest } from '@modelcontextprotocol/sdk/types.js';
+import { CallToolRequestSchema, isInitializeRequest } from '@modelcontextprotocol/sdk/types.js';
 import { NextFunction, RequestHandler, Response } from 'express';
 
 import { getConfig } from '../../config.js';
+import { isFlowReadToolsEnabled } from '../../features/flowTools.js';
 import {
   isSiteSettingsScopeRequired,
   isStrictScopeMatchEnabled,
@@ -20,6 +21,7 @@ import {
   getSupportedApiScopes,
   getSupportedMcpScopes,
   MCP_SITE_SETTINGS_READ_SCOPE,
+  PULSE_LINEAGE_API_SCOPES,
 } from './scopes.js';
 import { AuthenticatedRequest } from './types.js';
 
@@ -267,8 +269,25 @@ async function getRequiredApiScopesForRequest(
   }
 
   const scopes = new Set<string>();
+  const lineage = toolName === 'get-data-lineage' || toolName === 'analyze-data-impact';
+  const prepEnabled = lineage ? await isFlowReadToolsEnabled(getConfig()) : true;
   for (const scope of getRequiredApiScopesForTool(toolName)) {
+    if (lineage && scope === 'tableau:flows:read' && !prepEnabled) continue;
     scopes.add(scope);
+  }
+  if (lineage) {
+    const parsed = CallToolRequestSchema.safeParse(body);
+    const args = parsed.success ? parsed.data.params.arguments : undefined;
+    const source = args?.source;
+    const type =
+      source !== null && typeof source === 'object' && !Array.isArray(source)
+        ? (source as Record<string, unknown>).type
+        : undefined;
+    if (
+      type !== 'local-flow' &&
+      (args?.includePulseDetails === true || type === 'pulse-definition' || type === 'pulse-metric')
+    )
+      for (const scope of PULSE_LINEAGE_API_SCOPES) scopes.add(scope);
   }
 
   return Array.from(scopes);
